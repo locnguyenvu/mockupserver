@@ -11,8 +11,8 @@ if len(sys.argv) == 1:
     sys.exit(2)
 
 host = sys.argv[1]
-#webhook_secret = "B19MLGXNZEed3xJxBWn0p6xtdRtmAXxFpZDkVkWoQNywFGNqD3VLSILjAK7+7hlhD/+09dbkWE6Ew8BkIICdLg=="
-webhook_secret = "pV6TZqzpREac+HiY8QbO/6UoyYDLdeBAoHLGSlE6EvkUsXavEBozTJyC884tTWscqeCsWqeQykeAKb2Hi/y4Dg=="
+webhook_secret = ""
+
 
 def sign_x(payload):
     dig = hmac.new(bytes(webhook_secret, 'utf8'), msg=bytes(payload, "utf8"), digestmod=hashlib.sha256)
