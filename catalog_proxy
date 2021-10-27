@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+ENV=${ENV:=staging}
+if [ "${ENV}" = "staging" ]; then
+    BASEURLTEMPLATE="http://catalog-service-api.int.staging.<country>.zalora.net"
+else 
+    BASEURLTEMPLATE="http://catalog-service-api.int.live.<country>.zalora.net"
+fi
+DEBUG=0
+
+while getopts "c:d" opti; do
+    case "${opti}" in 
+        c)
+            country="${OPTARG}"
+            ;;
+        d)
+            DEBUG=1
+            ;;
+        *)
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+if [ ! -v "country" ]; then
+    echo "Option -c <country> is required"
+    exit 1
+fi
+
+PATH=$1
+shift
+URIPARAMS=$@
+BASEURL=${BASEURLTEMPLATE//<country>/${country}}
+FULLURL=${BASEURL}/${PATH}
+
+declare -a CURLCOMMAND
+
+CURLCOMMAND=(
+    "/usr/bin/curl"    
+)
+
+for p in $URIPARAMS
+do 
+    CURLCOMMAND+=( "--data-urlencode" $p )
+done
+
+CURLCOMMAND+=( "${FULLURL}" )
+if [ $DEBUG -eq 0 ]; then
+    eval "${CURLCOMMAND[@]}"
+else
+    echo "${CURLCOMMAND[@]}"
+fi

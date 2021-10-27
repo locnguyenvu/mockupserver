@@ -1,0 +1,29 @@
+{
+  "po_number": "MPDS-M21044066354",
+  "source": "web",
+  "status": "received",
+  "country": "MY",
+  "supplier_id": 1268,
+  "supplier_name": "Test FBZ Seller 1",
+  "supplier_global": 2,
+  "logistic_type": "Drop Shipping",
+  "shipping_type": "Drop Shipping",
+  "items": [
+    {
+      "country": "my",
+      "sku": "17FE8AAE462482GS-020QYX",
+      "config_sku": "17FE8AAE462482GS",
+      "supplier_sku": "GSC-NT-IM 664-01M",
+      "purchase_order": {
+        "code": "MPDS-M21044066354",
+        "shipment_type": "Drop Shipping"
+      },
+      "supplier": {
+        "id": 1268,
+        "name": "Test FBZ Seller 1",
+        "name_en": "Test FBZ Seller 1",
+        "region": "global"
+      }
+    }
+  ]
+}
