@@ -62,26 +62,6 @@
                 "sku_simple": null,
                 "url": "https://static-catalog.staging.my.zalora.net/p/q-q-by-citizen-9831-682461-2",
                 "path": "/catalog-service-api/catalog//product/68/2461/2.jpg"
-            },
-            {
-                "id_catalog_brand": "2026",
-                "brand_name": "Q&Q by Citizen",
-                "brand_url_key": "q-q-by-citizen",
-                "sku": "QQ026AC13JASMY",
-                "fk_catalog_brand": "2026",
-                "id_catalog_product_image": "7808483",
-                "fk_catalog_config": 164286,
-                "fk_catalog_simple": null,
-                "image": "3",
-                "main": "0",
-                "color": "0",
-                "updated_at": "2021-10-13 09:11:04",
-                "suffix": null,
-                "sc_hash": null,
-                "updated_at_ts": "6264",
-                "sku_simple": null,
-                "url": "https://static-catalog.staging.my.zalora.net/p/q-q-by-citizen-6264-682461-3",
-                "path": "/catalog-service-api/catalog//product/68/2461/3.jpg"
             }
         ]
     }

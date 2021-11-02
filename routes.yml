@@ -1,6 +1,0 @@
----
-products:
-  QQ026AC13JASMY:
-    -
-      route: "/catalog-api/products/products-info-by-config-skus"
-      data: "data/catalog-api_products_products-info-by-config-skus_QQ026AC13JASMY.json"

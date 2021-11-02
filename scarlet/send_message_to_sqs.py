@@ -1,10 +1,17 @@
 import boto3
+import os
 from os import path
+from dotenv import load_dotenv
+
+load_dotenv()
+
+access_key_id=str(os.getenv("AWS_SQS_ACCESS_KEY_ID"))
+access_key_secret=str(os.getenv("AWS_SQS_ACCESS_KEY_SECRET"))
 
 sqs = boto3.client(
     'sqs',
-    aws_access_key_id='AKIAZEOURIDIOOKRMDR6',
-    aws_secret_access_key='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',
+    aws_access_key_id=access_key_id,
+    aws_secret_access_key=access_key_secret,
 )
 
 payload_file = open('./oms_payload.json', 'r')

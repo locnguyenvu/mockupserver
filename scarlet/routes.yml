@@ -1,0 +1,13 @@
+---
+catalog:
+  QQ026AC13JASMY:
+    -
+      route: "/catalog-api/products/products-info-by-config-skus"
+      data: "data/catalog-api_products_products-info-by-config-skus_QQ026AC13JASMY.json"
+  D84E1SHD669089GS:
+    - 
+      route: "/catalog-api/suppliers/suppliers-by-config-sku"
+      data: "data/catalog-api_suppliers_suppliers-by-config-sku_D84E1SHD669089GS.json"
+    - 
+      route: "/catalog-api/products/products-info-by-config-skus"
+      data: "data/catalog-api_products_products-info-by-config-skus_D84E1SHD669089GS.json"

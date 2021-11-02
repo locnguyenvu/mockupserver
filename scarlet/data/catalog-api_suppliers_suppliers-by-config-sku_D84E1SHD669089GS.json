@@ -1,0 +1,11 @@
+[
+    {
+        "id_supplier": "10931",
+        "name": "MP Test Seller",
+        "identifier": "1020059073",
+        "type": "merchant",
+        "seller_center": "Local",
+        "sc_short_code": null,
+        "sku_supplier_source": "TMN090707-S"
+    }
+]

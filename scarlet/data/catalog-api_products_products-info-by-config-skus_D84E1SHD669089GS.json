@@ -1,0 +1,48 @@
+{
+    "D84E1SHD669089GS": {
+        "meta": {
+            "attribute_set_name": "shoes",
+            "attribute_set_label": "Shoes",
+            "sku": "D84E1SHD669089GS",
+            "id_catalog_config": "1661678",
+            "name": "NT090707",
+            "brand": "Perllini&Mel",
+            "color": "Black",
+            "gender": "Male",
+            "sizesystembrand": "International",
+            "shop_type": "1",
+            "luxury": null,
+            "range": null,
+            "sub_cat_type": "Sneakers"
+        },
+        "simples": {
+            "D84E1SHD669089GS-015FQQ": {
+                "size": "M",
+                "sku": "D84E1SHD669089GS-015FQQ"
+            }
+        },
+        "images": [
+            {
+                "id_catalog_brand": "3444",
+                "brand_name": "Perllini&Mel",
+                "brand_url_key": "perllini-mel",
+                "sku": "D84E1SHD669089GS",
+                "fk_catalog_brand": "3444",
+                "id_catalog_product_image": "7808304",
+                "fk_catalog_config": 1661678,
+                "fk_catalog_simple": null,
+                "image": "1",
+                "main": "1",
+                "color": "0",
+                "updated_at": "2021-07-12 16:02:08",
+                "suffix": null,
+                "sc_hash": "4b018be75eddc0e58e75a4537640f458",
+                "updated_at_ts": "5728",
+                "sku_simple": null,
+                "url": "https://static-catalog.staging.my.zalora.net/p/perllini-mel-5728-8761661-1",
+                "path": "/catalog-service-api/catalog//product/87/61661/1.jpg",
+                "sprite": "https://static-catalog.staging.my.zalora.net/p/perllini-mel-5728-8761661-1.jpg"
+            }
+        ]
+    }
+}

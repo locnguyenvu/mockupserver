@@ -1,21 +1,24 @@
 import hashlib
 import hmac
 import hashlib
-import base64
 import requests
 import sys
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 if len(sys.argv) == 1:
     print("Host is missing")
     sys.exit(2)
 
 host = sys.argv[1]
-#webhook_secret = "B19MLGXNZEed3xJxBWn0p6xtdRtmAXxFpZDkVkWoQNywFGNqD3VLSILjAK7+7hlhD/+09dbkWE6Ew8BkIICdLg=="
-webhook_secret = "pV6TZqzpREac+HiY8QbO/6UoyYDLdeBAoHLGSlE6EvkUsXavEBozTJyC884tTWscqeCsWqeQykeAKb2Hi/y4Dg=="
+webhook_secret = str(os.getenv("WEBHOOK_SECRET"))
 
 def sign_x(payload):
-    dig = hmac.new(bytes(webhook_secret, 'utf8'), msg=bytes(payload, "utf8"), digestmod=hashlib.sha256)
+    global webhook_secret
+    dig = hmac.new(webhook_secret.encode('utf8'), msg=bytes(payload, "utf8"), digestmod=hashlib.sha256)
     return dig.hexdigest()
 
 payload='{"JobId":"98da3e3e-73d3-491d-8599-0ee2762f4737","JobCode":"MPDS-M2050201287612","ClientId":"4e23bc49-8eb7-4d72-b6cc-8b70cedea5b4","ClientName":"Zalora Staging","ProductId":"ef10c929-45ce-4cef-a13f-b59ed55a6a44","ProductStatusName":"Todo","ProductStatusId":2000,"PayloadId":"b6d737ab-3033-490d-b956-a1bed98499e1","EventGroupName":"product","EventDatetimeUtc":1629789316604,"Action":"PropertiesUpdated","Actor":{"UserId":"9c40064a-05e4-4f1b-8588-90a6a8ae325a"}}'

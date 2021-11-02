@@ -5,7 +5,7 @@ import re
 import json
 
 class TestServerHandler(BaseHTTPRequestHandler):
-    config = None
+    config = {} 
 
     def do_GET(self):
         self.send_response(200)
@@ -14,7 +14,7 @@ class TestServerHandler(BaseHTTPRequestHandler):
 
         o = urlparse(self.path)
 
-        for key, routes in self.config["products"].items():
+        for key, routes in self.config["catalog"].items():
             
             if not re.search(key, o.query):
                 continue
