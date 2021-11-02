@@ -3,7 +3,7 @@
 
 ```
 pip3 install boto3 
-pip3 install dotenv
+pip3 install python-dotenv
 ```
 
 ## Create dot file `.env`
